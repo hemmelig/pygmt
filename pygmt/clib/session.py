@@ -111,7 +111,7 @@ class Session:
     ...             )
     ...             # Read the contents of the temp file before it's deleted.
     ...             print(fout.read().strip())
-    -180 180 -90 90 -8592.14453125 5558.79248047 1 1 361 181
+    -180 180 -90 90 -8592.14453125 5558.79248047 1 1 361 181 0
     """
 
     # The minimum version of GMT required
@@ -1226,8 +1226,8 @@ class Session:
         ...             args = '{} -L0 -Cn ->{}'.format(fin, fout.name)
         ...             ses.call_module('grdinfo', args)
         ...             print(fout.read().strip())
-        -180 180 -90 90 -8592.14453125 5558.79248047 1 1 361 181
-        >>> # The output is: w e s n z0 z1 dx dy n_columns n_rows
+        -180 180 -90 90 -8592.14453125 5558.79248047 1 1 361 181 0
+        >>> # The output is: w e s n z0 z1 dx dy n_columns n_rows registration
 
         """
         # Conversion to a C-contiguous array needs to be done here and not in
